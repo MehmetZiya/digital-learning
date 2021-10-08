@@ -1,7 +1,0 @@
-{
-    "env": {
-        "MONGO_USER" : "mehmet",
-        "MONGO_PASSWORD" : "VnSSRhDoo4CH9R5r",
-        "MONGO_DB" : "digital-learning"
-    }
-}
