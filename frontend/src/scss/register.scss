@@ -1,0 +1,9 @@
+@import "./variable.scss";
+
+.form-control {
+    background-color: $dark-gray;
+    border: 2px solid $pink;
+    border-radius: 1rem;
+    width: 70%;
+    margin: 1rem auto;
+}

@@ -1,10 +1,11 @@
+import Register from './pages/Register' ;
 
-import './App.css';
 
 function App() {
   return (
     <div className="App">
       <h1>Initial project files</h1>
+      <Register />
     </div>
   );
 }
