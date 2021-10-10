@@ -28,7 +28,11 @@ module.exports = buildSchema(`
     type Category {
         _id: ID!
         name: String!
-        subCategory : [String!]!
+        subCategory : [subCategory!]!
+    }
+
+    type subCategory {
+        name: String!
     }
 
     input UserInput {
