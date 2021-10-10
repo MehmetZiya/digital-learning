@@ -25,6 +25,12 @@ module.exports = buildSchema(`
         releaseDate: String!
     }
 
+    type Category {
+        _id: ID!
+        name: String!
+        subCategory : [String!]!
+    }
+
     input UserInput {
         name: String!
         surname: String!
@@ -43,12 +49,15 @@ module.exports = buildSchema(`
     type RootQuery {
         users: [User!]!
         courses: [Course!]!
+        categories: [Category!]!
     }
 
     type RootMutation {
         createUser(userInput: UserInput): User
         createCourse(courseInput: CourseInput): Course
     }
+
+
     schema {
         query: RootQuery
         mutation: RootMutation

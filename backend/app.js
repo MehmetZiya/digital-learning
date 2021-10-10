@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const graphqlHttp = require("express-graphql");
+const graphqlHTTP = require('express-graphql').graphqlHTTP;
 const mongoose = require("mongoose");
 
 //graphQL schema and functions
@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 // graphQL setup
 app.use(
   '/graphql',
-  graphqlHttp({
+  graphqlHTTP({
     schema: graphQlSchema,
     rootValue: graphQlResolvers,
     graphiql: true
