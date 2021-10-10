@@ -20,7 +20,7 @@ module.exports = {
           desc : args.courseInput.desc,
           price : args.courseInput.price,
           img: args.courseInput.img,
-          releaseDate : new Date(args.courseInput.releaseDate),
+          releaseDate : new Date(args.courseInput.releaseDate).toLocaleDateString()
       });
       let createdCourse;
       try {
