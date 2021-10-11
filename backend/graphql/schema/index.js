@@ -13,6 +13,12 @@ module.exports = buildSchema(`
         owner: [Course]
     }
 
+    type AuthData {
+        userId: ID!
+        token: String!
+        tokenExpiration: Int!
+    }
+
     type Course {
         _id: ID!
         title: String!
@@ -54,6 +60,7 @@ module.exports = buildSchema(`
         users: [User!]!
         courses: [Course!]!
         categories: [Category!]!
+        login(email: String! , password: String!): AuthData!
     }
 
     type RootMutation {
