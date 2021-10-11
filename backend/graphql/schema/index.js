@@ -30,6 +30,7 @@ module.exports = buildSchema(`
         totalRate: Int
         releaseDate: String!
         creator: User!
+        category: Category!
     }
 
     type Category {

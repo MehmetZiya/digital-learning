@@ -31,6 +31,7 @@ module.exports = {
       const result = await course.save();
       createdCourse = transformCourse(result);
       const courseCreator = await User.findById(req.userId);
+
       if (!courseCreator) {
         throw new Error("User not found!");
       }
