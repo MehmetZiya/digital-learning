@@ -32,15 +32,14 @@ const courseSchema = new Schema({
     type: Date,
     required: true
   },
-  /* owner: {
+  creator: {
     type: Schema.Types.ObjectId,
     ref: "User",
-    required: true
-  }, */
-  /* category: {
+  }, 
+  category: {
     type: Schema.Types.ObjectId,
     ref: "Category"
-  }, */
+  }, 
 });
 
 module.exports = mongoose.model("Course", courseSchema);

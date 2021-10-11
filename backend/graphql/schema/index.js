@@ -8,9 +8,9 @@ module.exports = buildSchema(`
         email: String!
         password: String
         img: String
-        wishList: [Course]
-        purchased: [Course]
-        owner: [Course]
+        wishList: [Course!]
+        purchased: [Course!]
+        owner: [Course!]
     }
 
     type AuthData {
@@ -29,6 +29,7 @@ module.exports = buildSchema(`
         rating: Int
         totalRate: Int
         releaseDate: String!
+        creator: User!
     }
 
     type Category {
