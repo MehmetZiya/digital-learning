@@ -8,9 +8,15 @@ module.exports = buildSchema(`
         email: String!
         password: String
         img: String
-        wishList: [Course]
-        purchased: [Course]
-        owner: [Course]
+        wishList: [Course!]
+        purchased: [Course!]
+        owner: [Course!]
+    }
+
+    type AuthData {
+        userId: ID!
+        token: String!
+        tokenExpiration: Int!
     }
 
     type Course {
@@ -23,6 +29,8 @@ module.exports = buildSchema(`
         rating: Int
         totalRate: Int
         releaseDate: String!
+        creator: User!
+        category: Category!
     }
 
     type Category {
@@ -54,6 +62,7 @@ module.exports = buildSchema(`
         users: [User!]!
         courses: [Course!]!
         categories: [Category!]!
+        login(email: String! , password: String!): AuthData!
     }
 
     type RootMutation {

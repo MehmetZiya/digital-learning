@@ -1,9 +1,55 @@
 @import "./variable.scss";
 
 .form-control {
-    background-color: $dark-gray;
-    border: 2px solid $pink;
-    border-radius: 1rem;
-    width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: $dark-gray;
+  border: 2px solid $pink;
+  border-radius: 1rem;
+  width: 85%;
+  margin: 8rem auto 1rem auto;
+
+  .form-input {
+    width: 80%;
+  }
+
+  input {
+    width: 100%;
+    padding: 1rem;
     margin: 1rem auto;
+    border: 1px solid $pink;
+    border-radius: 0.7rem;
+    background-color: $gray;
+  }
+  .form-action {
+      .link{
+        margin: 1rem;
+        text-align: center;
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            color: $nav;
+            font-size: large;
+            font-weight: 700;
+        }
+        a:hover {
+            color: $pink;
+        }
+      }
+      button {
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+      }
+  }
+}
+
+@media (min-width: 575px) {
+  
+  .form-control {
+    width: 60%;
+  }
+  
 }

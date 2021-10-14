@@ -1,18 +1,16 @@
+
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import '../scss/register.scss';
 
-const Register = () => {
-  const nameRef = useRef();
-  const surnameRef = useRef();
+const Login = () => {
+  
   const emailRef = useRef();
   const passwordRef = useRef();
 
   const submitHandler = (e) => {
     e.preventDefault();
     const userInputs = {
-      name: nameRef.current.value,
-      surname: surnameRef.current.value,
       email: emailRef.current.value,
       password: passwordRef.current.value,
     };
@@ -21,23 +19,7 @@ const Register = () => {
 
   return (
     <form  className="form-control" onSubmit={submitHandler}>
-        <h2>Register</h2>
-      <div className="form-input">
-        <input 
-            type="text" 
-            id="name" 
-            placeholder="name" 
-            ref={nameRef}
-            required />
-      </div>
-      <div className="form-input">
-        <input
-          type="text"
-          id="surname"
-          placeholder="surname"
-          ref={surnameRef}
-          required />
-      </div>
+        <h2>Login</h2>
       <div className="form-input">
         <input 
             type="email" 
@@ -54,15 +36,15 @@ const Register = () => {
           ref={passwordRef}
           required />
       </div>
-      <div className ="form-action">
-        <button className="btn" type="submit">Register</button>
+      <div className="form-action">
+        <button className="btn" type="submit">Login</button>
         <div className="link">
-        <span>Have an accaount? 👉🏻  </span>
-        <Link to="/login"> Login</Link>
+        <span>Dont have an accaount? 👉🏻   </span>
+        <Link to="/register">Register</Link>
         </div>
       </div>
     </form>
   );
 };
 
-export default Register;
+export default Login;
