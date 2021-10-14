@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap');
+@import "./scss/variable.scss";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color: aliceblue;
+  margin: 0;
+  
+}
+.App {
+  width: 100%;
+}
+.btn{
+  background-color: $pink;
+  padding: 1rem;
+  border: 1px solid $pink;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  margin: 1rem auto;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: $nav;
+  border: 1px solid $nav;
+}
+

@@ -9,12 +9,11 @@ module.exports = {
           ...categories._doc,
           _id: category.id,
           name: category.name,
-          subCategory: category.subCategory
+          subCategory: category.subCategory,
         };
       });
     } catch (err) {
       throw err;
     }
   },
-
 };

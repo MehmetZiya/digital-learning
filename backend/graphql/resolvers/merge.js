@@ -33,7 +33,7 @@ const transformCourse = course => {
       ...course._doc,
       _id: course.id,
       releaseDate: dateToString(course._doc.date),
-      owner: user.bind(this, course.owner)
+      creator: user.bind(this, course.creator)
     };
   };
 
