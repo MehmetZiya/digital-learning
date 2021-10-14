@@ -24,15 +24,19 @@
     background-color: $gray;
   }
   .form-action {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
       .link{
-        margin: 1rem;
+        margin-top: 2rem;
         text-align: center;
         a {
-            text-decoration: none;
-            cursor: pointer;
-            color: $nav;
-            font-size: large;
-            font-weight: 700;
+          padding:0.4rem 1rem;
+          background-color: rgb(53, 53, 53);
+          border-radius: 0.7rem;
+          text-decoration: none;
+          cursor: pointer;
+          color: $nav;
+          
         }
         a:hover {
             color: $pink;
@@ -47,9 +51,12 @@
 }
 
 @media (min-width: 575px) {
-  
   .form-control {
     width: 60%;
   }
-  
+}
+@media (min-width: 1200px) {
+  .form-control {
+    width: 40%;
+  }
 }
