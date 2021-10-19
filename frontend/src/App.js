@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
+import CreateCourse from "./pages/CreateCourse";
 
 const client = new ApolloClient({
   uri: "http://localhost:5000/graphql",
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route exact path="/home">
             <HomePage />
+          </Route>
+          <Route exact path="/newCourse">
+            <CreateCourse />
           </Route>
           <Route exact path="/register">
             <Register />

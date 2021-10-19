@@ -17,6 +17,10 @@ const NavLinks = ({handleLinkClick}) => {
         Wish List
       </NavLink>
 
+      <NavLink onClick={handleLinkClick} to="/newCourse" activeClassName="active" className ="navItem">
+        Create Course
+      </NavLink>
+
       <NavLink onClick={handleLinkClick} to="/register" activeClassName="active" className ="navItem">
         Register
       </NavLink>
