@@ -1,13 +1,16 @@
-const Course = require("../../models/course");
-const User = require("../../models/user");
+
 const { courses, createCourse } = require("./course");
+const { createUser, login } = require("./user")
+
 
 const resolvers = {
     Query: {
-        courses
+        courses,
+        login
     },
     Mutation: {
-      createCourse
+      createCourse,
+      createUser
     }
 }
   module.exports = resolvers;
