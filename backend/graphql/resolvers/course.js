@@ -21,9 +21,24 @@ module.exports = {
       price: +args.courseInput.price,
       img: args.courseInput.img,
       releaseDate: new Date(args.courseInput.releaseDate).toLocaleDateString(),
-      creator: User.findById(args.courseInput.creator)
-    }).save();
+      creator: args.courseInput.creator
+    });
     
-    return course;
+    try {
+      const createdCourse = await course.save();
+      
+      const courseOwner = await User.findById(args.courseInput.creator);
+
+      if (!courseCreator) {
+        throw new Error("User not found!");
+      }
+      courseOwner.owner.push(course);
+      await courseCreator.save();
+
+      return createdCourse;
+    } catch (err) {
+      console.log(err);
+      throw err;
+    } 
   },
 };
