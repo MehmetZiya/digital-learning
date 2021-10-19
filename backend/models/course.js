@@ -13,11 +13,11 @@ const courseSchema = new Schema({
   },
   price: {
     type: Number,
-    required: true,
+    
   },
   img: {
     type: String,
-    required: true,
+    
   },
   totalEnrolled: {
     type: Number
@@ -29,8 +29,8 @@ const courseSchema = new Schema({
     type: Number
   },
   releaseDate: {
-    type: Date,
-    required: true
+    type: String,
+   
   },
   creator: {
     type: Schema.Types.ObjectId,
